@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Site Identity -->
+  <title>CineVerseInfo — Latest Movies, Web Series, Reviews & OTT Info</title>
+  <meta name="description" content="CineVerseInfo.com — Latest movie & web series info, reviews, cast, OTT release dates, trailers and where to watch. Find movie details, ratings and reviews for Hindi, English, Tamil, Telugu and more.">
+  <meta name="keywords" content="movies, web series, movie review, OTT, where to watch, CineVerseInfo, film news, trailers, cast, release date">
+  <link rel="canonical" href="https://cineverseinfo.com/">
+
+  <!-- Social / OpenGraph -->
+  <meta property="og:site_name" content="CineVerseInfo">
+  <meta property="og:title" content="CineVerseInfo — Latest Movies, Web Series & Reviews">
+  <meta property="og:description" content="Discover latest movies, web series, reviews, cast info and where to watch — CineVerseInfo.com">
+  <meta property="og:url" content="https://cineverseinfo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cineverseinfo.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@CineVerseInfo">
+  <meta name="author" content="CineVerseInfo">
+
+  <!-- SEO / Indexing -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="alternate" hreflang="en" href="https://cineverseinfo.com/">
+  <link rel="alternate" hreflang="hi" href="https://cineverseinfo.com/hi/">
+
+  <!-- Favicons (add your favicon files in /images/) -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Basic Styles (Dark theme with yellow-red-orange gradients) -->
+  <style>
+    :root{
+      --bg:#0d0d0d;
+      --panel:#141414;
+      --muted:#bdbdbd;
+      --accent1:#FFD54F; /* yellow */
+      --accent2:#FB8C00; /* orange */
+      --accent3:#E53935; /* red */
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --maxw:1200px;
+      font-family: 'Poppins', sans-serif;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #0b0b0b 0%, #121212 100%);
+      color:#f5f5f5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:60px;
+    }
+    a{color:var(--accent1); text-decoration:none}
+    header.site-header{
+      position:sticky; top:0; z-index:999;
+      background: linear-gradient(90deg, rgba(13,13,13,0.92), rgba(20,20,20,0.72));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .container{max-width:var(--maxw); margin:0 auto; padding:18px;}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{
+      width:48px;height:48px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent3),var(--accent2),var(--accent1));
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#111;
+      box-shadow: 0 8px 30px rgba(229,57,53,0.12), inset 0 -6px 18px rgba(255,255,255,0.06);
+    }
+    .brand h1{font-size:18px;margin:0}
+    .nav{display:flex;gap:12px;align-items:center;margin-left:auto}
+    .nav a{padding:8px 12px;border-radius:8px;font-size:14px;color:#fff;opacity:0.9}
+    .search-bar{margin-top:12px; display:flex; gap:8px; align-items:center}
+    .search-input{
+      flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      color:#fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6) inset;
+    }
+    .cta-btn{
+      padding:10px 16px;border-radius:10px;font-weight:600;border:none;
+      background:linear-gradient(90deg,var(--accent3),var(--accent2),var(--accent1));
+      color:#120709; cursor:pointer; box-shadow: 0 8px 28px rgba(251,140,0,0.12);
+    }
+
+    main{padding:22px 0}
+    .hero{
+      display:grid;grid-template-columns: 1fr 320px;gap:20px;align-items:start;margin-bottom:22px;
+    }
+    .carousel{
+      border-radius:var(--radius); overflow:hidden; position:relative; min-height:260px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.1));
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .carousel img{width:100%;height:100%;object-fit:cover;display:block}
+    .carousel .overlay {position:absolute;left:18px;bottom:18px;color:#fff; text-shadow:0 6px 20px rgba(0,0,0,0.6)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:700;background:rgba(0,0,0,0.45);}
+
+    .right-panel{
+      background:var(--panel); padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);
+    }
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+
+    .movie-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+      border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.02);
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+    .movie-card:hover{transform:translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.6)}
+    .movie-thumb{height:260px; width:100%; object-fit:cover; display:block}
+    .movie-meta{padding:10px}
+    .movie-meta h3{margin:0 0 6px 0;font-size:15px}
+    .movie-meta p{margin:0;font-size:13px;color:var(--muted)}
+    .movie-actions{display:flex;gap:8px;margin-top:10px}
+    .btn-small{padding:8px 10px;border-radius:8px;font-size:13px;border:none;cursor:pointer}
+    .btn-watch{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#111}
+    .btn-download{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent1)}
+
+    footer.site-footer{margin-top:30px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .flex{display:flex;align-items:center;gap:12px}
+    .pill{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero{grid-template-columns: 1fr; gap:12px}
+      .carousel{min-height:220px}
+      .movie-thumb{height:200px}
+    }
+  </style>
+
+  <!-- JSON-LD structured data (Site + SearchAction + Example Movie Entries) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://cineverseinfo.com/#website",
+        "url":"https://cineverseinfo.com/",
+        "name":"CineVerseInfo",
+        "description":"CineVerseInfo.com — Latest movie & web series info, reviews, cast, OTT release dates, trailers and where to watch.",
+        "publisher":{
+          "@type":"Organization",
+          "name":"CineVerseInfo",
+          "logo":{"@type":"ImageObject","url":"https://cineverseinfo.com/images/logo.png"}
+        },
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://cineverseinfo.com/?s={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://cineverseinfo.com/#organization",
+        "name":"CineVerseInfo",
+        "url":"https://cineverseinfo.com",
+        "logo":{"@type":"ImageObject","url":"https://cineverseinfo.com/images/logo.png"}
+      },
+
+      /* Example movie entries — replace with your real movies or generate dynamically */
+      {
+        "@type":"Movie",
+        "name":"Example Movie: Avenger Dawn",
+        "image":"https://cineverseinfo.com/images/movies/avenger-dawn.jpg",
+        "director":"John Doe",
+        "datePublished":"2025-09-12",
+        "genre":["Action","Sci-Fi"],
+        "duration":"PT2H10M",
+        "description":"Avenger Dawn is a high-octane action sci-fi about...",
+        "aggregateRating":{
+          "@type":"AggregateRating",
+          "ratingValue":"8.2",
+          "reviewCount":"1520"
+        },
+        "offers":{
+          "@type":"Offer",
+          "url":"https://cineverseinfo.com/movies/avenger-dawn.html",
+          "availability":"https://schema.org/InStock",
+          "price":"0"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Small inline script for search engine friendly "sitemap" link suggestion -->
+  <!-- Remember to add /sitemap.xml to your repo root for best SEO -->
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:12px;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">CV</div>
+        <div>
+          <h1 style="font-size:16px;margin:0">CineVerseInfo</h1>
+          <div style="font-size:12px;color:var(--muted)">Latest movies • OTT info • Reviews</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" title="Home">Home</a>
+        <a href="/movies/" title="Movies">Movies</a>
+        <a href="/web-series/" title="Web Series">Web Series</a>
+        <a href="/reviews/" title="Reviews">Reviews</a>
+        <a href="/upcoming/" title="Upcoming">Upcoming</a>
+      </nav>
+    </div>
+
+    <div class="container search-bar" style="padding-bottom:12px">
+      <input id="site-search" class="search-input" type="search" placeholder="Search movies, reviews, web series, actor, year..." aria-label="Search movies">
+      <button id="search-btn" class="cta-btn">Search</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <!-- Hero / Carousel + Right Panel -->
+      <div class="hero">
+        <div>
+          <div class="carousel" id="main-carousel" role="region" aria-label="Featured movies">
+            <img src="/images/hero/featured-1.jpg" alt="Featured Movie 1 poster" loading="lazy">
+            <div class="overlay">
+              <span class="badge">New</span>
+              <h2 style="margin:6px 0 0 0">Featured: Avenger Dawn</h2>
+              <p style="margin:6px 0 0 0;color:#eee">Action • 2025 • 2h 10m</p>
+              <div style="margin-top:10px">
+                <a class="cta-btn" href="/movies/avenger-dawn.html">Watch Info</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div style="margin-top:18px">
+            <div class="section-title">
+              <h3 style="margin:0">Categories</h3>
+              <a href="/categories/" style="font-size:13px;color:var(--muted)">View all</a>
+            </div>
+            <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+              <a class="pill" href="/genre/action/">Action</a>
+              <a class="pill" href="/genre/romance/">Romance</a>
+              <a class="pill" href="/genre/comedy/">Comedy</a>
+              <a class="pill" href="/genre/horror/">Horror</a>
+              <a class="pill" href="/genre/drama/">Drama</a>
+              <a class="pill" href="/genre/english/">English</a>
+              <a class="pill" href="/genre/hindi/">Hindi</a>
+            </div>
+          </div>
+
+          <!-- Latest Movies -->
+          <section style="margin-top:18px">
+            <div class="section-title">
+              <h3 style="margin:0">Latest Movies</h3>
+              <a href="/latest/" style="font-size:13px;color:var(--muted)">See all</a>
+            </div>
+
+            <div class="card-grid" id="latest-movies">
+              <!-- Example movie card — copy this block per movie -->
+              <article class="movie-card" itemscope itemtype="https://schema.org/Movie">
+                <a href="/movies/avenger-dawn.html" aria-label="Avenger Dawn details">
+                  <img class="movie-thumb" data-src="/images/movies/avenger-dawn.jpg" alt="Avenger Dawn Poster" loading="lazy">
+                </a>
+                <div class="movie-meta">
+                  <h3 itemprop="name"><a href="/movies/avenger-dawn.html">Avenger Dawn</a></h3>
+                  <p><span itemprop="genre">Action, Sci-Fi</span> • <span itemprop="datePublished">2025</span></p>
+                  <div class="movie-actions">
+                    <a class="btn-small btn-watch" href="/movies/avenger-dawn.html" aria-label="Watch Avenger Dawn info">View</a>
+                    <a class="btn-small btn-download" href="/watch/avenger-dawn-download.html" aria-label="Download Avenger Dawn (affiliate)">Download</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- TODO: Duplicate above movie-card and replace details for more movies -->
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Right panel: Trending / Most Viewed / Newsletter -->
+        <aside class="right-panel" aria-label="Sidebar">
+          <div class="section-title">
+            <h4 style="margin:0">Trending Now</h4>
+            <small style="color:var(--muted)">Top picks</small>
+          </div>
+
+          <ol style="padding-left:18px;margin:0 0 12px 0">
+            <li><a href="/movies/avenger-dawn.html">Avenger Dawn — 8.2</a></li>
+            <li><a href="/movies/leo-2023.html">Leo (2023) — 7.9</a></li>
+            <li><a href="/web-series/zero-hour.html">Zero Hour (S1) — 8.5</a></li>
+          </ol>
+
+          <div style="margin-top:14px">
+            <h4 style="margin:0 0 8px 0">Newsletter</h4>
+            <p style="color:var(--muted);font-size:13px;margin:0 0 8px 0">Get weekly updates on new releases & OTT drops</p>
+            <form id="newsletter-form">
+              <input type="email" name="email" placeholder="Your email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+              <button class="cta-btn" style="width:100%;margin-top:8px">Subscribe</button>
+            </form>
+          </div>
+
+          <div style="margin-top:18px">
+            <h4 style="margin:0 0 8px 0">Quick Links</h4>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <a href="/reviews/">Latest Reviews</a>
+              <a href="/upcoming/">Upcoming Releases</a>
+              <a href="/contact/">Contact</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Reviews & Articles -->
+      <section style="margin-top:8px">
+        <div class="section-title">
+          <h3 style="margin:0">Latest Reviews & Articles</h3>
+          <a href="/reviews/" style="font-size:13px;color:var(--muted)">Read all</a>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 320px;gap:16px;">
+          <div>
+            <article style="background:var(--panel);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);margin-bottom:12px">
+              <h4 style="margin:0 0 8px 0">Avenger Dawn — Honest Review</h4>
+              <p style="color:var(--muted);margin:0 0 8px 0">Short excerpt from review... <a href="/reviews/avenger-dawn-review.html">Read more</a></p>
+              <div style="font-size:13px;color:var(--muted)">By CineVerse Team • Sep 13, 2025</div>
+            </article>
+
+            <!-- TODO: add more review articles -->
+          </div>
+
+          <aside style="background:var(--panel);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);">
+            <h4 style="margin:0 0 8px 0">OTT Releases This Week</h4>
+            <ul style="margin:0;padding-left:18px;color:var(--muted)">
+              <li><a href="/where-to-watch/avenger-dawn.html">Avenger Dawn — Netflix</a></li>
+              <li><a href="/where-to-watch/leo.html">Leo — Prime Video</a></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer container" role="contentinfo">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+          <div>
+            <strong>CineVerseInfo</strong>
+            <div style="font-size:13px;color:var(--muted)">© <span id="year"></span> CineVerseInfo • All rights reserved</div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Scripts: search, lazyload, small SEO helpers -->
+  <script>
+    // Set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple client-side search redirect to site query (useful for SearchAction)
+    const searchInput = document.getElementById('site-search');
+    const searchBtn = document.getElementById('search-btn');
+    function doSearch(){
+      const q = searchInput.value.trim();
+      if(!q) return;
+      // Use a friendly query URL - GitHub pages static search will rely on query param or client index
+      window.location.href = '/?s=' + encodeURIComponent(q);
+    }
+    searchBtn.addEventListener('click', doSearch);
+    searchInput.addEventListener('keydown', function(e){ if(e.key==='Enter') doSearch(); });
+
+    // Lazy-load images (simple)
+    document.addEventListener('DOMContentLoaded', function(){
+      const imgs = document.querySelectorAll('img[data-src]');
+      const config = { rootMargin: '50px 0px', threshold: 0.01 };
+      let observer;
+      if('IntersectionObserver' in window){
+        observer = new IntersectionObserver(function(entries, self){
+          entries.forEach(entry => {
+            if(entry.isIntersecting){
+              preloadImage(entry.target);
+              self.unobserve(entry.target);
+            }
+          });
+        }, config);
+        imgs.forEach(img => observer.observe(img));
+      } else {
+        // fallback
+        imgs.forEach(img => preloadImage(img));
+      }
+      function preloadImage(img){
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      }
+    });
+
+    // Minimal carousel auto-rotate (for hero)
+    (function(){
+      const carousel = document.getElementById('main-carousel');
+      if(!carousel) return;
+      const images = [
+        '/images/hero/featured-1.jpg',
+        '/images/hero/featured-2.jpg',
+        '/images/hero/featured-3.jpg'
+      ];
+      let idx = 0;
+      setInterval(() => {
+        idx = (idx + 1) % images.length;
+        const img = carousel.querySelector('img');
+        img.src = images[idx];
+      }, 5000);
+    })();
+  </script>
+
+  <!-- Helpful SEO tips (visible in source, not the UI) -->
+  <!--
+    SEO Checklist:
+    1) Create /sitemap.xml and upload to repo root. (Generate automatically from your movie list)
+    2) Create /robots.txt allowing GoogleBot and pointing to sitemap.
+    3) For each movie create a dedicated page: /movies/movie-slug.html with full schema.org Movie JSON-LD
+    4) Use descriptive filenames & alt text for images (e.g., avenger-dawn-poster.jpg)
+    5) Use internal linking: from home -> movie -> related -> category
+    6) Build an RSS feed or JSON feed for updates and submit to indexers
+    7) Add social share buttons with proper OG tags per movie page
+    8) Keep meta titles unique and <= 60 chars; meta descriptions ~ 150-160 chars
+  -->
+
+</body>
+</html>
