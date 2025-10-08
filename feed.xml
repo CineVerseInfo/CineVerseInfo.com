@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+<title>CineVerseInfo Latest Movies</title>
+<link>https://cineverseinfo.com/</link>
+<description>Latest movies, web series, reviews and updates from CineVerseInfo.com</description>
+<language>en-us</language>
+
+<item>
+  <title>Avenger Dawn (2025)</title>
+  <link>https://cineverseinfo.com/movies/avenger-dawn.html</link>
+  <description>High-octane action sci-fi about superheroes saving the world.</description>
+  <pubDate>Wed, 13 Sep 2025 10:00:00 GMT</pubDate>
+</item>
+
+<item>
+  <title>Zero Hour (S1)</title>
+  <link>https://cineverseinfo.com/web-series/zero-hour.html</link>
+  <description>Thrilling web series with suspense & action.</description>
+  <pubDate>Tue, 12 Sep 2025 10:00:00 GMT</pubDate>
+</item>
+
+</channel>
+</rss>
