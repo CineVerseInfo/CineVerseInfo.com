@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
+  <url>
+    <loc>https://cineverseinfo.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Movies -->
+  <url>
+    <loc>https://cineverseinfo.com/movies/avenger-dawn.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cineverseinfo.com/movies/leo.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Web Series -->
+  <url>
+    <loc>https://cineverseinfo.com/web-series/zero-hour.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Reviews -->
+  <url>
+    <loc>https://cineverseinfo.com/reviews/avenger-dawn-review.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Utility pages -->
+  <url>
+    <loc>https://cineverseinfo.com/privacy.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cineverseinfo.com/terms.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cineverseinfo.com/contact.html</loc>
+    <priority>0.5</priority>
+  </url>
+</urlset>
